@@ -4,14 +4,9 @@
 ___
 
 
-[Technologies](http://dev.nodeca.com) | [How To Use](http://dev.nodeca.com) | [License](http://dev.nodeca.com)
-
-
-
 ## 🚀 Technologies
-___
 
-### This project was developed with the following technologies:
+This project was developed with the following technologies:
 
 
 + HTML5 ✔
@@ -25,7 +20,7 @@ ___
 
 ## 🐱‍👤 How To Use
 
-### To clone and run this application, you'll need Git, Node.js v10.16 or higher + Npm v6.9 or higher installed on your computer. From your command line:
+To clone and run this application, you'll need Git, Node.js v10.16 or higher + Npm v6.9 or higher installed on your computer. From your command line:
 
 
 
@@ -43,9 +38,9 @@ ___
 
 
 ## 📝 License
-___
 
-This project is under the MIT license. See the LICENSE for more information.
+
+This project is under the MIT license. See the [LICENSE](https://github.com/brunolimadevelopment/challenge/blob/master/front-end/SPA/MIT%20License.txt) for more information.
 
 ___
 
