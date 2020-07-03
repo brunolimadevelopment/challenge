@@ -1,0 +1,81 @@
+.#{$prefix}-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.#{$prefix}-list-products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: rem(50);
+    grid-row-gap: rem(20);
+    
+    @include respond-to(sm) {
+        grid-template-columns: repeat(auto-fit,46%);
+    }
+
+    @include respond-to(md) {
+        grid-row-gap: rem(50);
+        grid-template-columns: repeat(auto-fit,29%);
+    }
+}
+
+.#{$prefix}-product {
+    @include size(100%, inherit);
+    border: rem(0.8) solid rgba(116, 116, 116, 0.30196078431372547);
+    border-radius: rem(3);
+    padding: rem(30) rem(15);
+    text-align: center;
+    
+    @include e('thumb') {
+        @include size(100%, inherit);
+        max-width: 50%;    
+    }
+    
+    @include e('legend') {
+        @include flexBox(flex, center, space-evenly, column, inherit, inherit);
+        @include size(inherit, 70px);
+        margin-top: rem(15);
+
+    }
+
+    @include e('name') {
+        @include typography(100, 16, $font-default);
+        color: cl(titles, grayLight);
+        margin: rem(0);
+    }
+
+    @include e('value') {
+        @include typography(100, 16, $font-default);
+        color: cl(titles, grayLight);
+        line-height: 1;
+    }
+    
+    @include e('buy') {
+        @include typography(100, 14, $font-default);
+        @include size(100%,inherit);
+        @extend %transitionAll;
+        border: 0;
+        color: cl(titles, white);
+        line-height: 1;
+        margin-top: rem(15);
+        padding: rem(15);
+        text-transform: uppercase;
+    }
+}
+
+.add {
+    background: cl(btns, buy);
+    
+    &:hover {
+        background: cl(btns, buyHover);
+    }
+}
+
+.removed {
+    background: cl(btns, removed);
+    
+    &:hover {
+        background: cl(btns, buyHover);
+    }
+}

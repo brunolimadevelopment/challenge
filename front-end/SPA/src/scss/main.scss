@@ -1,0 +1,14 @@
+/*
+* Copyright: 2020  
+* Desenvolvedor: Bruno 
+*/
+
+@import 'vendor/base';
+@import 'global/all';
+@import 'partials/base';
+
+
+.main {
+	@extend %boxFull;
+    overflow: hidden;
+}

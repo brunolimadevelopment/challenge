@@ -1,0 +1,66 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Projeto teste lojinha - front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/app.css -o build/app.css",
+    "build": "npm run build:css"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Bruno",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin": "^7.0.1",
+    "postcss": "^7.0.27",
+    "postcss-scss": "^2.0.0"
+  },
+  "dependencies": {
+    "browserslist": "^4.9.1",
+    "gulp-tinypng-compress": "^1.2.5",
+    "gulp.spritesmith": "^6.11.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
+    "postcss-cli": "^7.1.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "safari 5",
+    "ie 8",
+    "ie 9",
+    "opera 12.1",
+    "ios 6",
+    "android 4"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunolimadevelopment/challenge/tree/master/front-end"
+  }
+}

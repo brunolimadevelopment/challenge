@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../../../fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('../../../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$font-default         : 'Open Sans', Arial, helvetica, sans-serif !default;
+$font-secondary       : 'robotoregular', Arial, helvetica, sans-serif !default;
+
+//REM
+@function rem($pxsize) { 
+  @return ($pxsize/16)+rem; 
+}
+
+
+@mixin typography( $weight: $x, $size: $y, $font: $font-default) {
+  
+  font: $weight rem( $size ) $font;
+
+}
+
+$font-sizes: (
+  // u = ultra
+  uu-large   : 67px,
+  u-large    : 48px,
+  // h = hiper
+  hhh-large  : 44px,
+  hh-large   : 36px,
+  h-large    : 32px,
+  // x = extra
+  xxx-large  : 30px,
+  xx-large   : 27px,
+  x-large    : 24px,
+  large      : 20px,
+  
+  x-medium   : 18px,
+  medium     : 16px, // Your font size base.
+  // x = extra
+  small      : 14px,
+  x-small    : 12px,
+  xx-small   : 10px
+);
+
+
+@function use-fz($size){
+  @if map-has-key($font-sizes, $size) {
+    @return map-get($font-sizes, $size);
+  }
+  
+  @warn "Unfortunately, no value could be retrieved from `#{size}`. "
+        + "Please make sure it is defined in `$font-sizes` map.";
+  @return null;
+}
+
+
+
+@mixin make-fz($name: fz){
+  @each $sufix, $value in $font-sizes {
+    .#{$name}--#{$sufix}, 
+    %#{$name}--#{$sufix} {
+      font-size: use-fz($sufix);
+    }
+  }
+}
+
+/// Prefix for using in the mixin make-fz
+///
+/// * Necessary use '-'
+/// Ex: $prefix : 'df-';
+///
+/// @type String
+///
+/// @example scss - Use
+///   $prefix : 'df-';
+///   @include make-fz($prefix + 'font');
+///
+/// @example css - CSS result
+///   .df-font-x-large {
+///     font-size: 24px;
+///   }
+$prefix : $prefix;
+
+/// Using mixin make-fz
+/// Generate classes and placeholders
+///
+/// @example scss and css - SCSS and CSS result
+///   ....
+///   %font-medium, 
+///   .font-medium {
+///     font-size: 16px;
+///   }
+///
+///   %font-small {
+///   .font-small {
+///     font-size: 14px;
+///   }
+///   ....
+@include make-fz($prefix + 'fz');

@@ -1,0 +1,46 @@
+.#{$prefix}-component-cart {
+    @include size(40%, inherit);
+    float: left;
+    
+    @include respond-to(sm) {
+        @include size(15%, inherit);
+    }
+
+    @include respond-to(md) {
+        @include size(10%, inherit);
+    }
+    
+    @include e('box') {
+        @include flexBox(flex, center, space-between, row, inherit, inherit);
+        @include size(auto, inherit);
+        border: rem(0.4) solid rgba(208, 208, 208, 0.9);
+        border-radius: rem(20);
+        float: right;
+        padding: rem(7);
+        position: relative;
+    }
+    
+    @include e('icon-cart') {
+        color: cl(titles, grayLight);
+        font-size: rem(20);
+        margin-right: rem(8);
+    }
+    
+    @include e('summary') {
+        @include typography(100, 14, $font-default);
+        cursor: pointer;
+    }
+    
+    @include e('total') {
+        @include typography(600, 16, $font-default);
+        @include size(rem(180), inherit);
+        display: none;
+        border-radius: rem(20);
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: rem(30);
+        color: cl(titles, black);
+        padding: rem(8) rem(0);
+    }
+}

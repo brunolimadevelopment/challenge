@@ -1,0 +1,86 @@
+.#{$prefix}-component-bar {
+    @include flexBox(flex, center, space-between, row, inherit, inherit);
+    padding: rem(25) rem(0);
+
+    @include e('logo') {
+        @include size(60%, inherit);
+        border-right: rem(1) solid rgba(187, 187, 187, 0.9);
+        display: flex;
+        margin: rem(0);
+        padding-right: rem(21);
+        
+        @include respond-to(sm) {
+            @include size(20%, inherit);
+        }
+
+        @include respond-to(md) {
+            @include size(15%, inherit);
+        }
+
+        @include m('footer') {
+            border-right: 0;
+            padding: 0;
+        }
+    }
+    
+    @include e('link') {
+        font-size: rem(0);
+    }
+    
+    @include e('thumb') {
+        @include size(100%, inherit);
+    }
+
+    @include m('footer') {
+        justify-content: center;
+        
+        @include respond-to(sm) {
+            justify-content: space-between;
+        }
+    }
+}
+
+
+.#{$prefix}-component-nav {
+    $self: &;      
+    @include flexBox(none, center, center, inherit, inherit, inherit);
+    
+    @include respond-to(sm) {
+        @include size(50%, inherit);   
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    @include respond-to(md) {
+        @include size(60%, inherit);   
+        justify-content: center;
+    }
+    
+    @include m('footer') {
+        justify-content: flex-end;
+    }
+}
+
+.#{$prefix}-component-nav-list {
+    @include size(100%, inherit);
+    @include flexBox(flex, center, space-between, row, inherit, inherit);
+    
+    @include respond-to(md) {
+        width: 70%;
+    }
+
+    @include respond-to(lg) {
+        width: 50%;
+    }
+
+    @include e('link') {
+        @include typography(100, 18, $font-default);
+        @extend %transitionAll; 
+        color: cl(titles, black);
+        text-decoration: none;
+        
+        &:hover {
+            color: cl(titles, green);
+        }
+    }
+}

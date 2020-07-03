@@ -1,0 +1,63 @@
+//Box Full
+%boxFull {
+    float: left;
+    width: 100%;
+}
+
+// Espaçamento 
+%offsetMargin {
+	margin: rem(15) 0;
+
+	@include respond-to( md ) {
+		margin: rem(30) 0;
+	}
+}
+
+%offsetPadding {
+	padding: rem(30) 0;
+
+	@include respond-to( sm ) {
+		padding: rem(60) 0;
+	}
+	
+	@include respond-to( md ) {
+		padding: rem(90) 0;
+	}
+	
+	@include respond-to( lg ) {
+		padding: rem(120) 0;
+	}
+}
+
+
+// No Margin
+%not-offsetMargin {
+	margin: 0;
+}
+
+
+// No Padding
+%not-offsetPadding {
+	padding: 0;
+}
+
+
+// Center Block
+%centerBlock{
+    display: block;
+    margin: {
+        right: auto;
+        left: auto;
+    }
+}
+
+
+// img prop
+%imgProp {
+	@include size(100%, auto);
+}
+
+// Transition
+%transitionAll {
+    transition: all .2s ease-in-out;
+}

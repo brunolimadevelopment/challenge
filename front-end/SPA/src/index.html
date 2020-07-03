@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA - Loja</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <main class="main">
+        <header class="spa-component-header">
+            <div class="container">
+                <div class="spa-component-bar">
+                    <h1 class="spa-component-bar__logo"><a href="/" class="spa-component-bar__link"><img src="/assets/img/oboticario.png" alt="O boticário" class="spa-component-bar__thumb"></a></h1>
+                    <nav class="spa-component-nav">
+                        <ul class="spa-component-nav-list">
+                            <li class="spa-component-nav-list__item"><a href="#" title="Perfumaria" class="spa-component-nav-list__link">Perfumaria</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Maquiagem" class="spa-component-nav-list__link">Maquiagem</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Cabelos" class="spa-component-nav-list__link">Cabelos</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Infantil" class="spa-component-nav-list__link">Infantil</a></li>
+                        </ul>
+                    </nav>
+                    <div class="spa-component-cart">
+                        <div class="spa-component-cart__box">
+                            <i class="fa fa-shopping-cart spa-component-cart__icon-cart" aria-hidden="true"></i>
+                            <span class="spa-component-cart__summary" id="qtd">Vazio</span>
+                            <span class="spa-component-cart__total" id="total"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="spa-section">
+            <div class="container">
+                <header class="spa-header-section">
+                    <h2 class="spa-header-section__title">últimos produtos</h2>
+                </header>
+                <div class="spa-grid">
+                    <div class="spa-list-products" id="products"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="spa-component-footer">
+            <div class="container">
+                <div class="spa-component-bar spa-component-bar--footer">
+                    <h1 class="spa-component-bar__logo spa-component-bar__logo--footer"><a href="/" class="spa-component-bar__link"><img src="http://localhost:3000/assets/img/oboticario.png" alt="O boticário" class="spa-component-bar__thumb"></a></h1>
+                    <nav class="spa-component-nav spa-component-nav--footer">
+                        <ul class="spa-component-nav-list">
+                            <li class="spa-component-nav-list__item"><a href="#" title="Perfumaria" class="spa-component-nav-list__link">Perfumaria</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Maquiagem" class="spa-component-nav-list__link">Maquiagem</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Cabelos" class="spa-component-nav-list__link">Cabelos</a></li>
+                            <li class="spa-component-nav-list__item"><a href="#" title="Infantil" class="spa-component-nav-list__link">Infantil</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="assets/js/main.min.js"></script>
+</body>
+</html>

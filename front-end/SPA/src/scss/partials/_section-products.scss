@@ -1,0 +1,20 @@
+.#{$prefix}-section {
+    $self: &;  
+    @extend %boxFull;
+    @extend %offsetMargin;    
+}
+
+.#{$prefix}-header-section {
+    @include flexBox(flex, center, center, row, inherit, inherit);
+    margin-bottom: rem(15);
+    
+    @include respond-to(sm) {
+        margin-bottom: rem(30);
+    }
+    
+    @include e('title') {
+        @include typography(100, 20, $font-default);
+        color: cl(titles, grayLight);
+        text-transform: uppercase;
+    }
+}

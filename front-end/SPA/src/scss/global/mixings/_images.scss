@@ -1,0 +1,17 @@
+$path--rel      : "../images";
+
+@mixin bkgImage( $img, $bg-color: false, $bg-repeat: false, $bg-position: false, $bg-size: false, $bg-attachment: false ) {
+    
+  background: {
+
+		image: url('#{$path--rel}/#{$img}');
+		
+		@if ( $bg-color )     { color   : $bg-color;    }
+		@if ( $bg-repeat )    { repeat  : $bg-repeat;   }
+		@if ( $bg-position )  { position: $bg-position; }
+		@if ( $bg-size )      { size    : $bg-size;     }
+		@if ( $bg-attachment ){ attachment    : $bg-attachment;     }
+		
+	}                            
+	
+}
