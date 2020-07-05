@@ -18,10 +18,10 @@ This project was developed with the following technologies:
 
 ___
 ## 💻 Desktop
-[Imgur](https://i.imgur.com/gAme1tg.gifv)
+![Imgur](https://i.imgur.com/gAme1tg.gifv)
 
 ## 📱 Mobile
-[Imgur](https://i.imgur.com/rFDnz6B.gifv)
+![Imgur](https://i.imgur.com/rFDnz6B.gifv)
 ___
 
 ## 🐱‍👤 How To Use
