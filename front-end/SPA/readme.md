@@ -17,6 +17,12 @@ This project was developed with the following technologies:
 + Npm ✔
 
 ___
+## 💻 Desktop
+[Imgur](https://i.imgur.com/gAme1tg.gifv)
+
+## 📱 Mobile
+[Imgur](https://i.imgur.com/rFDnz6B.gifv)
+___
 
 ## 🐱‍👤 How To Use
 
@@ -33,9 +39,14 @@ To clone and run this application, you'll need Git, Node.js v10.16 or higher + N
     # Install dependencies
     $ npm install
 
-    # Run the app
-    $ gulp
+    # Copy and past the folder data/products.json of /src for dist/assets
 
+    exemple:
+        dist/assets/data/products.json
+
+    # Run the app
+    $ gulp build
+    $ gulp 
 
 ## 📝 License
 
